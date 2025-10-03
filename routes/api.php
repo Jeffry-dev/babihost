@@ -3,7 +3,9 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\AuthController; // Import the AuthController
-use App\Http\Controllers\API\UserController;
+use App\Http\Controllers\API\UserController; // Import the UserController
+use App\Http\Controllers\API\HostController; // Import the HostController
+
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -20,3 +22,9 @@ Route::get('/users/{id}', [UserController::class, 'show']);
 Route::put('/users/{id}', [UserController::class, 'update']);
 Route::delete('/users/{id}', [UserController::class, 'destroy']);
 
+// Host routes
+Route::get('/hosts', [HostController::class, 'index']);
+Route::post('/hosts', [HostController::class, 'store']);
+Route::get('/hosts/{id}', [HostController::class, 'show']);
+Route::put('/hosts/{id}', [HostController::class, 'update']);
+Route::delete('/hosts/{id}', [HostController::class, 'destroy']);
