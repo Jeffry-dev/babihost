@@ -6,6 +6,7 @@ use App\Http\Controllers\API\AuthController; // Import the AuthController
 use App\Http\Controllers\API\UserController; // Import the UserController
 use App\Http\Controllers\API\HostController; // Import the HostController
 use App\Http\Controllers\API\PropertyController; // Import the PropertyController
+use App\Http\Controllers\API\RoomController; // Import the RoomController
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -35,3 +36,10 @@ Route::post('/properties', [PropertyController::class, 'store']);
 Route::get('/properties/{id}', [PropertyController::class, 'show']);
 Route::put('/properties/{id}', [PropertyController::class, 'update']);
 Route::delete('/properties/{id}', [PropertyController::class, 'destroy']);
+
+// Room routes
+Route::get('/rooms', [RoomController::class, 'index']);
+Route::post('/rooms', [RoomController::class, 'store']);
+Route::get('/rooms/{id}', [RoomController::class, 'show']);
+Route::put('/rooms/{id}', [RoomController::class, 'update']);
+Route::delete('/rooms/{id}', [RoomController::class, 'destroy']);
