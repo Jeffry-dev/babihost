@@ -20,9 +20,9 @@ class PropertySeeder extends Seeder
         foreach ($hosts as $host) {
             Property::create([
                 'host_id'=> $host->id,
-                'title'=> 'Cozy Apartment in ' . $host->id,
-                'description'=> 'A beautiful property with modern amenities, hosted by user ' . $host->id,
-                'address'=> '123 Example Street',
+                'title'=> 'Cozy Apartment in Beirut',
+                'description'=> 'A beautiful property with modern amenities',
+                'address'=> 'Beirut Street',
                 'country'=> 'Lebanon',
                 'city'=> 'Beirut',
                 'postal_code'=> '1001',

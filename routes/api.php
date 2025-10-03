@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\AuthController; // Import the AuthController
 use App\Http\Controllers\API\UserController; // Import the UserController
 use App\Http\Controllers\API\HostController; // Import the HostController
-
+use App\Http\Controllers\API\PropertyController; // Import the PropertyController
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -28,3 +28,10 @@ Route::post('/hosts', [HostController::class, 'store']);
 Route::get('/hosts/{id}', [HostController::class, 'show']);
 Route::put('/hosts/{id}', [HostController::class, 'update']);
 Route::delete('/hosts/{id}', [HostController::class, 'destroy']);
+
+// Property routes
+Route::get('/properties', [PropertyController::class, 'index']);
+Route::post('/properties', [PropertyController::class, 'store']);
+Route::get('/properties/{id}', [PropertyController::class, 'show']);
+Route::put('/properties/{id}', [PropertyController::class, 'update']);
+Route::delete('/properties/{id}', [PropertyController::class, 'destroy']);
