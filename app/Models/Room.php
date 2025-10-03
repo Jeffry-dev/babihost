@@ -9,10 +9,9 @@ class Room extends Model
     protected $fillable = [
         'property_id',
         'room_type',
-        'bed_count',
-        'amenities',
+        'capacity',
         'price_per_night',
-        'availability_status',
+        
     ];
     public function property()
     {
