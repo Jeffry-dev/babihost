@@ -6,16 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Booking extends Model
 {
-    protected $fillable = [
-        'user_id',
-        'property_id',
-        'room_id',
-        'check_in',
-        'check_out',
-        'guests',
-        'status',
-        'total_price',
-    ];
+ protected $fillable = [
+    'user_id',
+    'room_id',
+    'check_in_date',
+    'check_out_date',
+    'number_of_guests',
+    'total_price',
+    'status',
+];
+
     public function room()
     {
         return $this->belongsTo(Room::class);
