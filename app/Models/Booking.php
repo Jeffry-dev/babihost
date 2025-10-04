@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Booking extends Model
 {
- protected $fillable = [
+    // Mass assignable attributes
+    protected $fillable = [
     'user_id',
     'room_id',
     'check_in_date',
@@ -14,17 +15,21 @@ class Booking extends Model
     'number_of_guests',
     'total_price',
     'status',
-];
-
+    ];
+    // Relationships
+    // A booking belongs to a room
     public function room()
     {
         return $this->belongsTo(Room::class);
     }
+
+    // A booking has one payment 
     public function payment()
     {
         return $this->hasOne(Payment::class);
     } 
 
+    // A booking belongs to a user
     public function user()
     {
         return $this->belongsTo(User::class);

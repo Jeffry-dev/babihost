@@ -46,4 +46,33 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    // Relationships
+    // A user can have many bookings
+    public function bookings()
+    {
+        return $this->hasMany(Booking::class); 
+    }
+
+    // A user can have many favorites
+    public function favorites(){
+        return $this->hasMany(Favorite::class);
+    }
+
+    // A user can have many payments
+    public function payments(){
+        return $this->hasMany(Payment::class);
+    }
+
+    // A user can have one host profile
+    public function host()
+    {
+        return $this->hasOne(Host::class);
+    }
+
+    // A user can have many reviews
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
+
 }
