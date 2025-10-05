@@ -11,6 +11,7 @@ use App\Http\Controllers\API\BookingController; // Import the BookingController
 use App\Http\Controllers\API\PaymentController; // Import the PaymentController
 use App\Http\Controllers\API\ReviewController; // Import the ReviewController
 use App\Http\Controllers\API\FavoriteController; // Import the FavoriteController
+use App\Http\Controllers\API\AvailabilityController; // Import the AvailabilityController
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -74,3 +75,10 @@ Route::get('/favorites', [FavoriteController::class, 'index']);
 Route::post('/favorites', [FavoriteController::class, 'store']);
 Route::get('/favorites/{id}', [FavoriteController::class, 'show']);
 Route::delete('/favorites/{id}', [FavoriteController::class, 'destroy']);
+
+// Availability routes
+Route::get('/availabilities', [AvailabilityController::class, 'index']);
+Route::post('/availabilities', [AvailabilityController::class, 'store']);
+Route::get('/availabilities/{id}', [AvailabilityController::class, 'show']);
+Route::put('/availabilities/{id}', [AvailabilityController::class, 'update']);
+Route::delete('/availabilities/{id}', [AvailabilityController::class, 'destroy']);
