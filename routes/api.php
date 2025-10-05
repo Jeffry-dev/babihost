@@ -10,6 +10,7 @@ use App\Http\Controllers\API\RoomController; // Import the RoomController
 use App\Http\Controllers\API\BookingController; // Import the BookingController
 use App\Http\Controllers\API\PaymentController; // Import the PaymentController
 use App\Http\Controllers\API\ReviewController; // Import the ReviewController
+use App\Http\Controllers\API\FavoriteController; // Import the FavoriteController
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -67,3 +68,9 @@ Route::post('/reviews',[ReviewController::class,'store']);
 Route::get('/reviews/{id}', [ReviewController::class, 'show']);
 Route::put('/reviews/{id}', [ReviewController::class, 'update']);
 Route::delete('/reviews/{id}', [ReviewController::class, 'destroy']);
+
+// Favorite routes
+Route::get('/favorites', [FavoriteController::class, 'index']);
+Route::post('/favorites', [FavoriteController::class, 'store']);
+Route::get('/favorites/{id}', [FavoriteController::class, 'show']);
+Route::delete('/favorites/{id}', [FavoriteController::class, 'destroy']);
