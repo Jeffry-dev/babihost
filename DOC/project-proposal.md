@@ -64,4 +64,3 @@ The repository will be hosted on GitHub for backup and collaboration purposes.
 The BabiHost project will implement a full-featured booking and hosting platform API using Laravel.  
 It will demonstrate a strong understanding of backend development, database design, API structuring, and software engineering principles.  
 The system will be modular, scalable, and ready for front-end integration in future stages.  
-
