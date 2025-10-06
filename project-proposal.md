@@ -1,3 +1,5 @@
+# BabiHost API-Project Proposal
+
 ## 1. Introduction
 
 BabiHost is an online property rental and hosting platform designed to connect travelers with hosts offering accommodations.  
@@ -17,4 +19,3 @@ BabiHost is developed using the Laravel PHP framework, supported by various tool
 - **Development Server:** Herd  
 - **Testing Tool:** Postman  
 - **Version Control:** Git and GitHub  
-
