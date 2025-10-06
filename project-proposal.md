@@ -1,12 +1,20 @@
-# BabiHost API Overview
+## 1. Introduction
 
-**BabiHost** is an online property hosting and booking platform designed to connect hosts with travelers seeking short-term accommodations. The proposed API service acts as the backend system for both web and mobile applications, enabling smooth interactions such as property management, room bookings, payments, and user reviews.
+BabiHost is an online property rental and hosting platform designed to connect travelers with hosts offering accommodations.  
+The proposed API service serves as the backend system powering web and mobile applications, enabling seamless user experiences for browsing properties, booking rooms, managing payments, and leaving reviews.  
 
-This API is developed using the **Laravel framework**, following **RESTful architecture** to ensure scalability, security, and maintainability. It serves as the central source of truth for all application data and provides structured endpoints for both authenticated and unauthenticated users, facilitating efficient property searches, booking management, and host-user communication.
+This API follows RESTful principles to ensure scalability, security, and maintainability.  
+It acts as the single source of truth for all application data and provides endpoints for both authenticated and unauthenticated users.  
+
+---
+
 ## 2. Tools and Frameworks
 
-1. **Framework:** Laravel (PHP)  
-2. **Database:** SQLite (development)  
-3. **Development Server:** Herd  
-4. **Testing Tool:** Postman  
-5. **Version Control:** Git and GitHub  
+BabiHost is developed using the Laravel PHP framework, supported by various tools that enhance development, testing, and version control. The following technologies were used throughout the implementation process:
+
+- **Framework:** Laravel (PHP)  
+- **Database:** SQLite (development)  
+- **Development Server:** Herd  
+- **Testing Tool:** Postman  
+- **Version Control:** Git and GitHub  
+
